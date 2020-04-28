@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 echoinfo() {
     printf "%s * STATUS%s: %s\n" "${GC}" "${EC}" "$@";
@@ -40,7 +40,7 @@ echoinfo " Installing ansible."
 apt-get install software-properties-common
 apt-add-repository ppa:ansible/ansible
 apt-get update
-apt-get install ansible
+apt-get install -y ansible
 
 #echoinfo " Getting DIWA ansible playbooks."
 #git clone https://github.com/kamwoods/diwa-distro-ansible.git /srv/ansible
